@@ -13,5 +13,13 @@ namespace TestUser
 
             Assert.IsTrue(actual);
         }
+        [TestMethod]
+        public void User_Valid_lastname()
+        {
+            User valid = new User();
+            bool actual = valid.LNameValidation("Sahu");
+
+            Assert.IsTrue(actual);
+        }
     }
 }

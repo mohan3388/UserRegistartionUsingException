@@ -21,5 +21,19 @@ namespace UserRegistration
                 return false;
             }
         }
+        public bool LNameValidation(string lname)
+        {
+            try
+            {
+                return Regex.IsMatch(lname, REGEX_PATTERN);
+               
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+               
+            }
+            
+        }
     }
 }
