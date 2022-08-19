@@ -13,6 +13,7 @@ namespace UserRegistration
         public static string EMAIL_REGEX_PATTERN = "^[0-9a-zA-Z]+[.+-_]{0,1}[0-9a-zA-Z]+[@][a-zA-Z]+[.][a-zA-Z]{2,3}([.][a-zA-Z]{2,3}){0,1}$";
         public static string MOBILE_REGEX_PATTERN = "^[91]{2}[' ']{1}[7898625487]{10}$";
         public static string PASS_REGEX_PATTERN = "^[A-Za-z]{8,}";
+        public static string PASS_REGEX_PATTERN2 = "^[A-Z]{1,}[A-Za-z]{8,}";
         public bool FNameValidation(string name)
         {
             try{
@@ -76,7 +77,7 @@ namespace UserRegistration
         {
             try
             {
-                return Regex.IsMatch(pass, PASS_REGEX_PATTERN);
+                return Regex.IsMatch(pass, PASS_REGEX_PATTERN2);
 
             }
             catch (Exception ex)
