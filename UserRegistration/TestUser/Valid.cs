@@ -63,5 +63,12 @@ namespace TestUser
             bool actual = valid.PassIncludeOneSpecialChar("Mohansa@12");
             Assert.IsTrue(actual);
         }
+        [TestMethod]
+        public void User_Valid_All_sample_Email()
+        {
+            User valid = new User();
+            bool actual = valid.AllSampleEmail("abc@yahoo.com");
+            Assert.IsTrue(actual);
+        }
     }
 }

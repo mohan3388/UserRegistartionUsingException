@@ -16,6 +16,7 @@ namespace UserRegistration
         public static string PASS_REGEX_PATTERN2 = "^[A-Z]{1,}[A-Za-z]{8,}";
         public static string PASS_REGEX_PATTERN3 = "^[A-Z]{1,}[A-Za-z]{6,}[0-9]{1,}";
         public static string PASS_REGEX_PATTERN4 = "^[A-Z]{1,}[A-Za-z]{5,}[!@#$%^&*]{1,}[0-9]{1,}";
+        public static string ALL_SAMPLE_EMAIL = "^[0-9a-zA-z]+([._+-]?[0-9a-zA-z]+)@[0-9a-zA-z]+.([c]{1}[o]{1}[m]{1})([n]{1}[e]{1}[t]{1})[,]([a]{1}[u]{1})([.][c]{1}[o]{1}[m]{1})$";
         public bool FNameValidation(string name)
         {
             try{
@@ -104,6 +105,18 @@ namespace UserRegistration
             try
             {
                 return Regex.IsMatch(pass, PASS_REGEX_PATTERN4);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool AllSampleEmail(string email)
+        {
+            try
+            {
+                return Regex.IsMatch(email, ALL_SAMPLE_EMAIL);
 
             }
             catch (Exception ex)
