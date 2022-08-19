@@ -16,9 +16,10 @@ namespace UserRegistration
             try{
                 return Regex.IsMatch(name, REGEX_PATTERN);
             }
-            catch(Exception)
+             catch (Exception ex)
             {
-                return false;
+                throw ex;
+               
             }
         }
     }
