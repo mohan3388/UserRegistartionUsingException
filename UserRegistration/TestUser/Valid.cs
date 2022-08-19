@@ -56,5 +56,12 @@ namespace TestUser
             bool actual = valid.PassIncludeOneNumeric("Mohansa12");
             Assert.IsTrue(actual);
         }
+        [TestMethod]
+        public void User_Valid_Password_Include_One_Specialchar()
+        {
+            User valid = new User();
+            bool actual = valid.PassIncludeOneSpecialChar("Mohansa@12");
+            Assert.IsTrue(actual);
+        }
     }
 }

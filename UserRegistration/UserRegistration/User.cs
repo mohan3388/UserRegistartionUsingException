@@ -15,6 +15,7 @@ namespace UserRegistration
         public static string PASS_REGEX_PATTERN = "^[A-Za-z]{8,}";
         public static string PASS_REGEX_PATTERN2 = "^[A-Z]{1,}[A-Za-z]{8,}";
         public static string PASS_REGEX_PATTERN3 = "^[A-Z]{1,}[A-Za-z]{6,}[0-9]{1,}";
+        public static string PASS_REGEX_PATTERN4 = "^[A-Z]{1,}[A-Za-z]{5,}[!@#$%^&*]{1,}[0-9]{1,}";
         public bool FNameValidation(string name)
         {
             try{
@@ -91,6 +92,18 @@ namespace UserRegistration
             try
             {
                 return Regex.IsMatch(pass, PASS_REGEX_PATTERN3);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
+        public bool PassIncludeOneSpecialChar(string pass)
+        {
+            try
+            {
+                return Regex.IsMatch(pass, PASS_REGEX_PATTERN4);
 
             }
             catch (Exception ex)
