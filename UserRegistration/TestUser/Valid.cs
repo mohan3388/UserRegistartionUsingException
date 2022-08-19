@@ -42,5 +42,12 @@ namespace TestUser
             bool actual = valid.PasswordValidation("mohansahu");
             Assert.IsTrue(actual);
         }
+        [TestMethod]
+        public void User_Valid_Password_Include_One_Uppercase()
+        {
+            User valid = new User();
+            bool actual = valid.PassIncludeOneUppercase("Mohansahu");
+            Assert.IsTrue(actual);
+        }
     }
 }

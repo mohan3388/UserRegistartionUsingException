@@ -72,5 +72,17 @@ namespace UserRegistration
                 throw ex;
             }
         }
+        public bool PassIncludeOneUppercase(string pass)
+        {
+            try
+            {
+                return Regex.IsMatch(pass, PASS_REGEX_PATTERN);
+
+            }
+            catch (Exception ex)
+            {
+                throw ex;
+            }
+        }
     }
 }
