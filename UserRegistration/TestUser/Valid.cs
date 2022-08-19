@@ -35,5 +35,12 @@ namespace TestUser
             bool actual = valid.MobileValidation("91 7898625487");
             Assert.IsTrue(actual);
         }
+        [TestMethod]
+        public void User_Valid_password()
+        {
+            User valid = new User();
+            bool actual = valid.PasswordValidation("mohansahu");
+            Assert.IsTrue(actual);
+        }
     }
 }
